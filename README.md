@@ -19,10 +19,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Setup resources in Azure - Resource Group, Virtual Machines (Windows 10, Windows Server 2022)
+- Ensure connectivity between the Client-1 (Windows 10 VM) and DC-1 (Windows Server, Domain Controller)
+- Login to DC-1 (Domain Controller), install Active Directory Domain Services, and create accounts (Admin and Normal User)
+- Join Client-1 to the domain
+- Configure Remote Desktop for Non-Administrative Users on Client-1
+- Create a number of users and log into Client-1 with the newly created credentials
 
 <h2>Deployment and Configuration Steps</h2>
 
