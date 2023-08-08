@@ -55,10 +55,70 @@ Login to DC-1, open Windows Defender Firewall with Advanced Security, and enable
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="821" alt="Screenshot 2023-08-08 at 1 05 53 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/9ab4551a-8106-466d-92b1-e720f0c43567">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Return to DC-1 and install Active Directory Domain Services. 
+</p>
+<br />
+
+<p>
+<img width="2036" alt="Screenshot 2023-08-08 at 1 09 06 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/14e18c57-c944-4c8b-bdf2-f53f0357d60e">
+<img width="669" alt="Screenshot 2023-08-08 at 1 28 14 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/252bd637-1189-4a14-8ce0-a82fe6249f8e">
+</p>
+<p>
+Promote the server as a Domain Controller, set up a new forest (assign a domain name - Ex: gjamesIT.com) then restart DC-1 and login to DC-1 with the newly configured domain credentials (Ex: gjamesIT.com\DC-User).
+</p>
+<br />
+
+<p>
+<img width="589" alt="Screenshot 2023-08-08 at 1 39 59 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/88e39c1d-d3d4-4327-95a5-79ab39529bbd">
+<img width="589" alt="Screenshot 2023-08-08 at 1 48 34 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/71c01770-e3ec-4589-82c7-31b1bb6444f3">
+</p>
+<p>
+Open Active Directory Users and Computers and create any Organizational Units needed as well as an Admin user.
+</p>
+<br />
+
+<p>
+<img width="573" alt="Screenshot 2023-08-08 at 1 55 02 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/ae9e9e0c-3533-468a-8170-7fbda0881fd8">
+<img width="670" alt="Screenshot 2023-08-08 at 2 00 43 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/bcb3cda6-b09e-4426-8e11-916eb77274e0">
+</p>
+<p>
+Add the newly created Admin account to the Domain Admins group. Log out / close the connection to DC-1 and log back in under the Admin account.
+</p>
+<br />
+
+<p>
+<img width="1285" alt="Screenshot 2023-08-08 at 2 15 14 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/514477a5-4d44-48b9-9409-04a1257edf4c">
+</p>
+<p>
+Return to the Azure portal and navigate to Client-1's Networking section. Select Client-1's NIC and change its DNS settings to DC-1's private IP address.
+</p>
+<br />
+
+<p>
+<img width="978" alt="Screenshot 2023-08-08 at 2 26 43 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/4d2ca939-eed4-432e-be21-4b4bb39f6d22">
+<img width="1200" alt="Screenshot 2023-08-08 at 2 39 14 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/b8826d77-5836-45e6-b8d6-a0280191d3b6">
+</p>
+<p>
+Restart Client-1 in the Azure portal, return to Remote Desktop and login to Client-1 as the original local admin and join it to the domain. Client-1 will restart.
+</p>
+<br />
+
+<p>
+<img width="980" alt="Screenshot 2023-08-08 at 2 44 56 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/6b7e5d91-5b66-4e1c-9875-540d389d8d86">
+</p>
+<p>
+Verify that Client-1 successfully joined the domain by logging in with the Admin account created in DC-1. Check Client-1's DNS configuration by opening Command Prompt and entering "ipconfig /all".
+</p>
+<br />
+
+<p>
+<img width="1203" alt="Screenshot 2023-08-08 at 2 56 49 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/4956094e-abc1-43bd-b501-f3bdf342e5d8">
+</p>
+<p>
+Configure Remote Desktop for non-administrative users in System Settings on Client-1. In this example, we will allow all Domain Users access to Client-1.
 </p>
 <br />
 
