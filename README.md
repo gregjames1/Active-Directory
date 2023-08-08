@@ -29,6 +29,31 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
+<img width="771" alt="Screenshot 2023-08-07 at 11 30 39 PM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/be7f0d3d-cf1e-459c-8c7d-c18e5a1e5aee">
+<img width="769" alt="Screenshot 2023-08-07 at 11 27 44 PM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/1fb5df7c-e70c-4f57-8d07-10d2acbca633">
+</p>
+<p>
+Create DC-1 (Windows Server VM) in Azure and allow it to create a Resource Group, Virtual Network, and Subnet. Create Client-1 (Windows 10) and select the Resource Group that was created with DC-1 to ensure they share the same permissions, policies, and network.
+</p>
+<br />
+
+<p>
+<img width="2160" alt="Screenshot 2023-08-07 at 11 54 58 PM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/19d269ce-c84f-43d6-ba70-ed5d01dc24ca">
+</p>
+<p>
+Navigate to DC-1's Network page and select "IP Configurations." Set DC-1's private IP address to be static.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Login to DC-1 and enable ICMPv4 on the local Firewall. Once this is complete, login to Client-1 and ping DC-1 to verify connectivity between the two VMs.
+</p>
+<br />
+
+<p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
