@@ -46,10 +46,11 @@ Navigate to DC-1's Network page and select "IP Configurations." Set DC-1's priva
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2498" alt="Screenshot 2023-08-08 at 12 49 25 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/b3ccf7a3-1984-4e48-b113-92a0c6bd7ed7">
+<img width="980" alt="Screenshot 2023-08-08 at 12 57 33 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/66e53dff-b517-4a3a-bcb7-c24c832f7697">
 </p>
 <p>
-Login to DC-1 and enable ICMPv4 on the local Firewall. Once this is complete, login to Client-1 and ping DC-1 to verify connectivity between the two VMs.
+Login to DC-1, open Windows Defender Firewall with Advanced Security, and enable ICMPv4 Echo Request. Once this is complete, login to Client-1 and ping DC-1 to verify connectivity between the two VMs.
 </p>
 <br />
 
