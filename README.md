@@ -123,17 +123,18 @@ Configure Remote Desktop for non-administrative users in System Settings on Clie
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="2186" alt="Screenshot 2023-08-08 at 3 30 27 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/6b271260-ee0d-452d-bfa1-955496c36049">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Domain users can now be added into Active Directory. In this example, a PowerShell Script is used to generate random usernames and add them to the _EMPLOYEES group that was created Active Directory Users and Computers on DC-1.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="672" alt="Screenshot 2023-08-08 at 3 34 05 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/903a7f20-92ee-4f41-8a6d-f6a0c4b388b9">
+<img width="1600" alt="Screenshot 2023-08-08 at 3 34 40 AM" src="https://github.com/gregjames1/Active-Directory/assets/129281605/47e01991-ba5a-4dcf-9b16-9e372a5a1885">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To verify that Active Directory was configured correctly, login to Client-1 with one of the newly generated Domain User accounts.
 </p>
 <br />
